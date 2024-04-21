@@ -6,6 +6,19 @@ These scripts must be ran section-wise, as some stages require manual input from
 
 Most MNE methods act in-place, e.g., running `data.do_operation()` will usually perform `do_operation` on `data`, without having to assign to a new variable. If you want to perform a method on an object without changing it, you would instead run `data.copy().do_operation()`, which applies `do_operation` to a copy of `data`, not `data` itself. 
 
+## MNE and FreeSurfer Installation
+It is recommended to install MNE via the standalone installers, using the following link: https://mne.tools/stable/install/installers.html#installers.
+
+The standalone installers provide you with a readymade environment, including spyder and jupyter notebooks. This environment also includes most of the signal processing tools that you will ever need to analyse EEG, MEG or fMRI data.
+
+FreeSurfer is more tricky if using windows, as it only runs on linux systems. If using a windows machine, follow the instructions on this page, https://surfer.nmr.mgh.harvard.edu/fswiki/FS7_wsl_ubuntu, to install FreeSurfer via WSL. 
+
+Note that you also will need to install MNE on WSL to run the necessary commands. This can be done using conda or pip, following these instructions: https://mne.tools/stable/install/manual_install.html#manual-install.
+
+Once installed, you will need to follow the instructions at https://mne.tools/stable/auto_tutorials/forward/10_background_freesurfer.html to perform the necessary FreeSurfer and MNE commands.
+
+**These steps can be tricky if new to computing. Often the best way to get this done is to directly consult somebody who has done it before.**
+
 ## Pre-Processing
 The goals of pre-processing EEG data (in this case) are as follows:
 1) Remove high and low frequency noise
